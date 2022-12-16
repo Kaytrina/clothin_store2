@@ -104,15 +104,19 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "-CauXbnQe9z5vB5ZjBFk1pQOaIBWnJot",
+									"value": "UYPXCaRY5Qwhy5qUOltH34_LSQJ",
 									"type": "string"
 								}
 							]
 						},
 						"method": "DELETE",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "k-bukasova.xn--80ahdri7a.site/api/del/3",
+							"raw": "k-bukasova.xn--80ahdri7a.site/api/del/9",
 							"host": [
 								"k-bukasova",
 								"xn--80ahdri7a",
@@ -121,7 +125,7 @@
 							"path": [
 								"api",
 								"del",
-								"3"
+								"9"
 							]
 						}
 					},
