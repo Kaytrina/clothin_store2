@@ -74,7 +74,7 @@ $config = [
 
         'PUT edit/<user_id>' => 'user/edit',  //редактирование данных польз.
         'DELETE delete' => 'user/delete',  //удаление польз.
-        'DELETE del/<id>' => 'user/del',  //удаление польз. адм.
+        'DELETE del/<user_id>' => 'user/del',  //удаление польз. адм.
 
         'POST order' => 'order/order',  //оформление заказа
 

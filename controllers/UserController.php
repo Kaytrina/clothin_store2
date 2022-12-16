@@ -16,8 +16,7 @@ class UserController extends FunctionController
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
             'class' => HttpBearerAuth::class,
-            'only'=>['delete'],
-            'only'=>['del']
+            'only'=>['delete','del']
         ];
         return $behaviors;
     }
@@ -52,11 +51,14 @@ class UserController extends FunctionController
         return $this->send(200,['body'=>['data','message'=>'Пользователь удалён']]);
     }
 
-    public function actionDel()
+    public function actionDel($user_id)
     {
+
+        $user=User::findOne($user_id);
+
         if (!$this->is_admin())
             return $this->send(403,['message'=>'В доступе отказано']);  //Проверка на админа
-        $user=Yii::$app->user->identity;
+        //$user=Yii::$app->user->identity;
         $user->delete();
         return $this->send(200,['body'=>['data','message'=>'Пользователь удалён']]);
         
